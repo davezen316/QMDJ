@@ -541,6 +541,7 @@
 				}
 
 				//---------------------------
+				echo $id_month." | transday:".$trans_day." | daycounter:".$day_counter;
 				if(!in_array(substr($id_month, 4), array('10','20','30','40','50','60','70','80','90','100','110','120'), true)){
 					if($id_month > 191001){
 						$id_month_query = "select id_month from month where id_month = (select max(id_month) from month where id_month < $id_month)";
@@ -552,49 +553,50 @@
 					}
 				}
 				else{
-					if($day_counter < $trans_day){
-						switch(substr($id_month, -2)) {
-							case '10':
-								$id_month = substr($id_month, 0, 4) . '01';
-								break;
-							case '20':
-								$id_month = substr($id_month, 0, 4) . '02';
-								break;
-							case '30':
-								$id_month = substr($id_month, 0, 4) . '03';
-								break;
-							case '40':
-								$id_month = substr($id_month, 0, 4) . '04';
-								break;
-							case '50':
-								$id_month = substr($id_month, 0, 4) . '05';
-								break;
-							case '60':
-								$id_month = substr($id_month, 0, 4) . '06';
-								break;
-							case '70':
-								$id_month = substr($id_month, 0, 4) . '07';
-								break;
-							case '80':
-								$id_month = substr($id_month, 0, 4) . '08';
-								break;
-							case '90':
-								$id_month = substr($id_month, 0, 4) . '09';
-								break;
-							case '100':
-								$id_month = substr($id_month, 0, 4) . '10';
-								break;
-							case '110':
-								$id_month = substr($id_month, 0, 4) . '11';
-								break;
-							case '120':
-								$id_month = substr($id_month, 0, 4) . '12';
-								break;
+					if($day_counter <= $trans_day){
+						if($time < $trans_time){
+							switch(substr($id_month, -2)) {
+								case '10':
+									$id_month = substr($id_month, 0, 4) . '01';
+									break;
+								case '20':
+									$id_month = substr($id_month, 0, 4) . '02';
+									break;
+								case '30':
+									$id_month = substr($id_month, 0, 4) . '03';
+									break;
+								case '40':
+									$id_month = substr($id_month, 0, 4) . '04';
+									break;
+								case '50':
+									$id_month = substr($id_month, 0, 4) . '05';
+									break;
+								case '60':
+									$id_month = substr($id_month, 0, 4) . '06';
+									break;
+								case '70':
+									$id_month = substr($id_month, 0, 4) . '07';
+									break;
+								case '80':
+									$id_month = substr($id_month, 0, 4) . '08';
+									break;
+								case '90':
+									$id_month = substr($id_month, 0, 4) . '09';
+									break;
+								case '100':
+									$id_month = substr($id_month, 0, 4) . '10';
+									break;
+								case '110':
+									$id_month = substr($id_month, 0, 4) . '11';
+									break;
+								case '120':
+									$id_month = substr($id_month, 0, 4) . '12';
+									break;
+							}
 						}
 					}
 				}
 
-				echo $id_month;
 				// if($day_counter >= $trans_day){
 				// 	//print_r("yes".$trans_day);
 				// 	if($day_counter == $trans_day){
@@ -1732,8 +1734,7 @@
 				// 		}
 				// 	}
 				// }
-				
-				echo $id_month;
+
 				$id_year_query = "select id_year from ten_thousand_years where id_day =" . $id_day;
 				$year_result = mysqli_query($link, $id_year_query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($year_result)){
