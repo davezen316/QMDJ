@@ -541,1152 +541,1199 @@
 				}
 
 				//---------------------------
-				if($id_month > 191001){
-					$id_month_query = "select id_month from month where id_month = (select max(id_month) from month where id_month < $id_month)";
-					$month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-					while($row = mysqli_fetch_array($month_result)){
-						$id_month = $row["id_month"];
-						//echo "month:".$id_month.'<br>';
-					}
-				}
-
-				if($day_counter >= $trans_day){
-					//print_r("yes".$trans_day);
-					if($day_counter == $trans_day){
-						if($time >= $trans_time){
-							switch ($id_month) {
-							    case '193060':
-							        $id_month_query = "select id_month from month where id_month = 193007";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '193012':
-							        $id_month_query = "select id_month from month where id_month = 193101";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '193350':
-							        $id_month_query = "select id_month from month where id_month = 193306";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '193312':
-							        $id_month_query = "select id_month from month where id_month = 193401";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '193630':
-							        $id_month_query = "select id_month from month where id_month = 193604";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '193612':
-							        $id_month_query = "select id_month from month where id_month = 193701";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '193870':
-							        $id_month_query = "select id_month from month where id_month = 193808";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '193812':
-							        $id_month_query = "select id_month from month where id_month = 193901";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '194160':
-							        $id_month_query = "select id_month from month where id_month = 194107";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '194112':
-							        $id_month_query = "select id_month from month where id_month = 194201";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '194440':
-							        $id_month_query = "select id_month from month where id_month = 194405";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '194412':
-							        $id_month_query = "select id_month from month where id_month = 194501";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '194720':
-							        $id_month_query = "select id_month from month where id_month = 194703";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '194412':
-							        $id_month_query = "select id_month from month where id_month = 194501";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '194970':
-							        $id_month_query = "select id_month from month where id_month = 194908";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '194912':
-							        $id_month_query = "select id_month from month where id_month = 195001";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '195250':
-							        $id_month_query = "select id_month from month where id_month = 195206";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '195212':
-							        $id_month_query = "select id_month from month where id_month = 195301";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '195530':
-							        $id_month_query = "select id_month from month where id_month = 195504";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '195512':
-							        $id_month_query = "select id_month from month where id_month = 195601";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '195780':
-							        $id_month_query = "select id_month from month where id_month = 195709";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '195712':
-							        $id_month_query = "select id_month from month where id_month = 195801";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '196060':
-							        $id_month_query = "select id_month from month where id_month = 196007";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '196012':
-							        $id_month_query = "select id_month from month where id_month = 196101";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '196340':
-							        $id_month_query = "select id_month from month where id_month = 196305";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '196312':
-							        $id_month_query = "select id_month from month where id_month = 196401";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '196630':
-							        $id_month_query = "select id_month from month where id_month = 196604";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '196612':
-							        $id_month_query = "select id_month from month where id_month = 196701";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '196870':
-							        $id_month_query = "select id_month from month where id_month = 196808";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '196812':
-							        $id_month_query = "select id_month from month where id_month = 196901";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '197150':
-							        $id_month_query = "select id_month from month where id_month = 197106";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '197112':
-							        $id_month_query = "select id_month from month where id_month = 197201";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '197440':
-							        $id_month_query = "select id_month from month where id_month = 197405";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '197412':
-							        $id_month_query = "select id_month from month where id_month = 197501";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '197680':
-							        $id_month_query = "select id_month from month where id_month = 197609";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '197612':
-							        $id_month_query = "select id_month from month where id_month = 197701";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '197960':
-							        $id_month_query = "select id_month from month where id_month = 197907";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '197912':
-							        $id_month_query = "select id_month from month where id_month = 198001";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '198240':
-							        $id_month_query = "select id_month from month where id_month = 198205";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '198212':
-							        $id_month_query = "select id_month from month where id_month = 198301";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '198760':
-							        $id_month_query = "select id_month from month where id_month = 198707";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '198712':
-							        $id_month_query = "select id_month from month where id_month = 198801";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '199050':
-							        $id_month_query = "select id_month from month where id_month = 199006";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '199012':
-							        $id_month_query = "select id_month from month where id_month = 199101";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '199330':
-							        $id_month_query = "select id_month from month where id_month = 199304";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '199312':
-							        $id_month_query = "select id_month from month where id_month = 199401";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '199580':
-							        $id_month_query = "select id_month from month where id_month = 199509";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '199512':
-							        $id_month_query = "select id_month from month where id_month = 199601";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '199850':
-							        $id_month_query = "select id_month from month where id_month = 199806";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '199812':
-							        $id_month_query = "select id_month from month where id_month = 199901";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '200140':
-							        $id_month_query = "select id_month from month where id_month = 200105";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '200112':
-							        $id_month_query = "select id_month from month where id_month = 200201";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '200420':
-							        $id_month_query = "select id_month from month where id_month = 200403";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '200412':
-							        $id_month_query = "select id_month from month where id_month = 200501";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '200670':
-							        $id_month_query = "select id_month from month where id_month = 200608";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '200612':
-							        $id_month_query = "select id_month from month where id_month = 200701";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '200950':
-							        $id_month_query = "select id_month from month where id_month = 200906";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '200912':
-							        $id_month_query = "select id_month from month where id_month = 201001";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '201240':
-							        $id_month_query = "select id_month from month where id_month = 201205";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '201212':
-							        $id_month_query = "select id_month from month where id_month = 201301";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '201490':
-							        $id_month_query = "select id_month from month where id_month = 201410";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '201412':
-							        $id_month_query = "select id_month from month where id_month = 201501";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '201760':
-							        $id_month_query = "select id_month from month where id_month = 201707";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '201712':
-							        $id_month_query = "select id_month from month where id_month = 201801";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '202040':
-							        $id_month_query = "select id_month from month where id_month = 202005";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '202012':
-							        $id_month_query = "select id_month from month where id_month = 202101";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '202320':
-							        $id_month_query = "select id_month from month where id_month = 202303";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '202312':
-							        $id_month_query = "select id_month from month where id_month = 202401";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '202560':
-							        $id_month_query = "select id_month from month where id_month = 202507";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '202512':
-							        $id_month_query = "select id_month from month where id_month = 202601";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '202850':
-							        $id_month_query = "select id_month from month where id_month = 202806";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '202812':
-							        $id_month_query = "select id_month from month where id_month = 202901";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    case '1984100':
-							        $id_month_query = "select id_month from month where id_month = 198411";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-							    case '198412':
-							        $id_month_query = "select id_month from month where id_month = 198501";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							        }
-							        break;
-
-							    default:
-							        $id_month_query = "select id_month from month where id_month = (select min(id_month) from month where id_month > $id_month)";
-							        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-							        while($row = mysqli_fetch_array($month_result)){
-							            $id_month = $row["id_month"];
-							            //echo "month:".$id_month.'<br>';
-							        }
-							}
-						}
-					}
-					else{
-						switch ($id_month) {
-						    case '193060':
-						        $id_month_query = "select id_month from month where id_month = 193007";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '193012':
-						        $id_month_query = "select id_month from month where id_month = 193101";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '193350':
-						        $id_month_query = "select id_month from month where id_month = 193306";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '193312':
-						        $id_month_query = "select id_month from month where id_month = 193401";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '193630':
-						        $id_month_query = "select id_month from month where id_month = 193604";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '193612':
-						        $id_month_query = "select id_month from month where id_month = 193701";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '193870':
-						        $id_month_query = "select id_month from month where id_month = 193808";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '193812':
-						        $id_month_query = "select id_month from month where id_month = 193901";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '194160':
-						        $id_month_query = "select id_month from month where id_month = 194107";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '194112':
-						        $id_month_query = "select id_month from month where id_month = 194201";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '194440':
-						        $id_month_query = "select id_month from month where id_month = 194405";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '194412':
-						        $id_month_query = "select id_month from month where id_month = 194501";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '194720':
-						        $id_month_query = "select id_month from month where id_month = 194703";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '194412':
-						        $id_month_query = "select id_month from month where id_month = 194501";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '194970':
-						        $id_month_query = "select id_month from month where id_month = 194908";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '194912':
-						        $id_month_query = "select id_month from month where id_month = 195001";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '195250':
-						        $id_month_query = "select id_month from month where id_month = 195206";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '195212':
-						        $id_month_query = "select id_month from month where id_month = 195301";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '195530':
-						        $id_month_query = "select id_month from month where id_month = 195504";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '195512':
-						        $id_month_query = "select id_month from month where id_month = 195601";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '195780':
-						        $id_month_query = "select id_month from month where id_month = 195709";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '195712':
-						        $id_month_query = "select id_month from month where id_month = 195801";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '196060':
-						        $id_month_query = "select id_month from month where id_month = 196007";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '196012':
-						        $id_month_query = "select id_month from month where id_month = 196101";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '196340':
-						        $id_month_query = "select id_month from month where id_month = 196305";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '196312':
-						        $id_month_query = "select id_month from month where id_month = 196401";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '196630':
-						        $id_month_query = "select id_month from month where id_month = 196604";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '196612':
-						        $id_month_query = "select id_month from month where id_month = 196701";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '196870':
-						        $id_month_query = "select id_month from month where id_month = 196808";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '196812':
-						        $id_month_query = "select id_month from month where id_month = 196901";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '197150':
-						        $id_month_query = "select id_month from month where id_month = 197106";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '197112':
-						        $id_month_query = "select id_month from month where id_month = 197201";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '197440':
-						        $id_month_query = "select id_month from month where id_month = 197405";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '197412':
-						        $id_month_query = "select id_month from month where id_month = 197501";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '197680':
-						        $id_month_query = "select id_month from month where id_month = 197609";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '197612':
-						        $id_month_query = "select id_month from month where id_month = 197701";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '197960':
-						        $id_month_query = "select id_month from month where id_month = 197907";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '197912':
-						        $id_month_query = "select id_month from month where id_month = 198001";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '198240':
-						        $id_month_query = "select id_month from month where id_month = 198205";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '198212':
-						        $id_month_query = "select id_month from month where id_month = 198301";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '198760':
-						        $id_month_query = "select id_month from month where id_month = 198707";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '198712':
-						        $id_month_query = "select id_month from month where id_month = 198801";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '199050':
-						        $id_month_query = "select id_month from month where id_month = 199006";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '199012':
-						        $id_month_query = "select id_month from month where id_month = 199101";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '199330':
-						        $id_month_query = "select id_month from month where id_month = 199304";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '199312':
-						        $id_month_query = "select id_month from month where id_month = 199401";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '199580':
-						        $id_month_query = "select id_month from month where id_month = 199509";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '199512':
-						        $id_month_query = "select id_month from month where id_month = 199601";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '199850':
-						        $id_month_query = "select id_month from month where id_month = 199806";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '199812':
-						        $id_month_query = "select id_month from month where id_month = 199901";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '200140':
-						        $id_month_query = "select id_month from month where id_month = 200105";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '200112':
-						        $id_month_query = "select id_month from month where id_month = 200201";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '200420':
-						        $id_month_query = "select id_month from month where id_month = 200403";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '200412':
-						        $id_month_query = "select id_month from month where id_month = 200501";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '200670':
-						        $id_month_query = "select id_month from month where id_month = 200608";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '200612':
-						        $id_month_query = "select id_month from month where id_month = 200701";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '200950':
-						        $id_month_query = "select id_month from month where id_month = 200906";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '200912':
-						        $id_month_query = "select id_month from month where id_month = 201001";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '201240':
-						        $id_month_query = "select id_month from month where id_month = 201205";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '201212':
-						        $id_month_query = "select id_month from month where id_month = 201301";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '201490':
-						        $id_month_query = "select id_month from month where id_month = 201410";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '201412':
-						        $id_month_query = "select id_month from month where id_month = 201501";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '201760':
-						        $id_month_query = "select id_month from month where id_month = 201707";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '201712':
-						        $id_month_query = "select id_month from month where id_month = 201801";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '202040':
-						        $id_month_query = "select id_month from month where id_month = 202005";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '202012':
-						        $id_month_query = "select id_month from month where id_month = 202101";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '202320':
-						        $id_month_query = "select id_month from month where id_month = 202303";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '202312':
-						        $id_month_query = "select id_month from month where id_month = 202401";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '202560':
-						        $id_month_query = "select id_month from month where id_month = 202507";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '202512':
-						        $id_month_query = "select id_month from month where id_month = 202601";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '202850':
-						        $id_month_query = "select id_month from month where id_month = 202806";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '202812':
-						        $id_month_query = "select id_month from month where id_month = 202901";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    case '1984100':
-						        $id_month_query = "select id_month from month where id_month = 198411";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-						    case '198412':
-						        $id_month_query = "select id_month from month where id_month = 198501";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						        }
-						        break;
-
-						    default:
-						        $id_month_query = "select id_month from month where id_month = (select min(id_month) from month where id_month > $id_month)";
-						        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						        while($row = mysqli_fetch_array($month_result)){
-						            $id_month = $row["id_month"];
-						            //echo "month:".$id_month.'<br>';
-						        }
+				if(!in_array(substr($id_month, 4), array('10','20','30','40','50','60','70','80','90','100','110','120'), true)){
+					if($id_month > 191001){
+						$id_month_query = "select id_month from month where id_month = (select max(id_month) from month where id_month < $id_month)";
+						$month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+						while($row = mysqli_fetch_array($month_result)){
+							$id_month = $row["id_month"];
+							//echo "month:".$id_month.'<br>';
 						}
 					}
 				}
+				else{
+					if($day_counter < $trans_day){
+						switch(substr($id_month, -2)) {
+							case '10':
+								$id_month = substr($id_month, 0, 4) . '01';
+								break;
+							case '20':
+								$id_month = substr($id_month, 0, 4) . '02';
+								break;
+							case '30':
+								$id_month = substr($id_month, 0, 4) . '03';
+								break;
+							case '40':
+								$id_month = substr($id_month, 0, 4) . '04';
+								break;
+							case '50':
+								$id_month = substr($id_month, 0, 4) . '05';
+								break;
+							case '60':
+								$id_month = substr($id_month, 0, 4) . '06';
+								break;
+							case '70':
+								$id_month = substr($id_month, 0, 4) . '07';
+								break;
+							case '80':
+								$id_month = substr($id_month, 0, 4) . '08';
+								break;
+							case '90':
+								$id_month = substr($id_month, 0, 4) . '09';
+								break;
+							case '100':
+								$id_month = substr($id_month, 0, 4) . '10';
+								break;
+							case '110':
+								$id_month = substr($id_month, 0, 4) . '11';
+								break;
+							case '120':
+								$id_month = substr($id_month, 0, 4) . '12';
+								break;
+						}
+					}
+				}
+
+				echo $id_month;
+				// if($day_counter >= $trans_day){
+				// 	//print_r("yes".$trans_day);
+				// 	if($day_counter == $trans_day){
+				// 		if($time >= $trans_time){
+				// 			switch ($id_month) {
+				// 			    case '193060':
+				// 			        $id_month_query = "select id_month from month where id_month = 193007";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '193012':
+				// 			        $id_month_query = "select id_month from month where id_month = 193101";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '193350':
+				// 			        $id_month_query = "select id_month from month where id_month = 193306";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '193312':
+				// 			        $id_month_query = "select id_month from month where id_month = 193401";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '193630':
+				// 			        $id_month_query = "select id_month from month where id_month = 193604";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '193612':
+				// 			        $id_month_query = "select id_month from month where id_month = 193701";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '193870':
+				// 			        $id_month_query = "select id_month from month where id_month = 193808";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '193812':
+				// 			        $id_month_query = "select id_month from month where id_month = 193901";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '194160':
+				// 			        $id_month_query = "select id_month from month where id_month = 194107";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '194112':
+				// 			        $id_month_query = "select id_month from month where id_month = 194201";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '194440':
+				// 			        $id_month_query = "select id_month from month where id_month = 194405";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '194412':
+				// 			        $id_month_query = "select id_month from month where id_month = 194501";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '194720':
+				// 			        $id_month_query = "select id_month from month where id_month = 194703";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '194412':
+				// 			        $id_month_query = "select id_month from month where id_month = 194501";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '194970':
+				// 			        $id_month_query = "select id_month from month where id_month = 194908";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '194912':
+				// 			        $id_month_query = "select id_month from month where id_month = 195001";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '195250':
+				// 			        $id_month_query = "select id_month from month where id_month = 195206";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '195212':
+				// 			        $id_month_query = "select id_month from month where id_month = 195301";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '195530':
+				// 			        $id_month_query = "select id_month from month where id_month = 195504";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '195512':
+				// 			        $id_month_query = "select id_month from month where id_month = 195601";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '195780':
+				// 			        $id_month_query = "select id_month from month where id_month = 195709";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '195712':
+				// 			        $id_month_query = "select id_month from month where id_month = 195801";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '196060':
+				// 			        $id_month_query = "select id_month from month where id_month = 196007";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '196012':
+				// 			        $id_month_query = "select id_month from month where id_month = 196101";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '196340':
+				// 			        $id_month_query = "select id_month from month where id_month = 196305";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '196312':
+				// 			        $id_month_query = "select id_month from month where id_month = 196401";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '196630':
+				// 			        $id_month_query = "select id_month from month where id_month = 196604";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '196612':
+				// 			        $id_month_query = "select id_month from month where id_month = 196701";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '196870':
+				// 			        $id_month_query = "select id_month from month where id_month = 196808";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '196812':
+				// 			        $id_month_query = "select id_month from month where id_month = 196901";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '197150':
+				// 			        $id_month_query = "select id_month from month where id_month = 197106";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '197112':
+				// 			        $id_month_query = "select id_month from month where id_month = 197201";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '197440':
+				// 			        $id_month_query = "select id_month from month where id_month = 197405";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '197412':
+				// 			        $id_month_query = "select id_month from month where id_month = 197501";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '197680':
+				// 			        $id_month_query = "select id_month from month where id_month = 197609";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '197612':
+				// 			        $id_month_query = "select id_month from month where id_month = 197701";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '197960':
+				// 			        $id_month_query = "select id_month from month where id_month = 197907";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '197912':
+				// 			        $id_month_query = "select id_month from month where id_month = 198001";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '198240':
+				// 			        $id_month_query = "select id_month from month where id_month = 198205";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '198212':
+				// 			        $id_month_query = "select id_month from month where id_month = 198301";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '198760':
+				// 			        $id_month_query = "select id_month from month where id_month = 198707";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '198712':
+				// 			        $id_month_query = "select id_month from month where id_month = 198801";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '199050':
+				// 			        $id_month_query = "select id_month from month where id_month = 199006";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '199012':
+				// 			        $id_month_query = "select id_month from month where id_month = 199101";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '199330':
+				// 			        $id_month_query = "select id_month from month where id_month = 199304";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '199312':
+				// 			        $id_month_query = "select id_month from month where id_month = 199401";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '199580':
+				// 			        $id_month_query = "select id_month from month where id_month = 199509";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '199512':
+				// 			        $id_month_query = "select id_month from month where id_month = 199601";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '199850':
+				// 			        $id_month_query = "select id_month from month where id_month = 199806";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '199812':
+				// 			        $id_month_query = "select id_month from month where id_month = 199901";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '200140':
+				// 			        $id_month_query = "select id_month from month where id_month = 200105";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '200112':
+				// 			        $id_month_query = "select id_month from month where id_month = 200201";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '200420':
+				// 			        $id_month_query = "select id_month from month where id_month = 200403";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '200412':
+				// 			        $id_month_query = "select id_month from month where id_month = 200501";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '200670':
+				// 			        $id_month_query = "select id_month from month where id_month = 200608";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '200612':
+				// 			        $id_month_query = "select id_month from month where id_month = 200701";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '200950':
+				// 			        $id_month_query = "select id_month from month where id_month = 200906";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '200912':
+				// 			        $id_month_query = "select id_month from month where id_month = 201001";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '201240':
+				// 			        $id_month_query = "select id_month from month where id_month = 201205";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '201212':
+				// 			        $id_month_query = "select id_month from month where id_month = 201301";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '201490':
+				// 			        $id_month_query = "select id_month from month where id_month = 201410";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '201412':
+				// 			        $id_month_query = "select id_month from month where id_month = 201501";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '201760':
+				// 			        $id_month_query = "select id_month from month where id_month = 201707";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '201712':
+				// 			        $id_month_query = "select id_month from month where id_month = 201801";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '202040':
+				// 			        $id_month_query = "select id_month from month where id_month = 202005";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '202012':
+				// 			        $id_month_query = "select id_month from month where id_month = 202101";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '202320':
+				// 			        $id_month_query = "select id_month from month where id_month = 202303";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '202312':
+				// 			        $id_month_query = "select id_month from month where id_month = 202401";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '202560':
+				// 			        $id_month_query = "select id_month from month where id_month = 202507";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '202512':
+				// 			        $id_month_query = "select id_month from month where id_month = 202601";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '202850':
+				// 			        $id_month_query = "select id_month from month where id_month = 202806";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '202812':
+				// 			        $id_month_query = "select id_month from month where id_month = 202901";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    case '1984100':
+				// 			        $id_month_query = "select id_month from month where id_month = 198411";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+				// 			    case '198412':
+				// 			        $id_month_query = "select id_month from month where id_month = 198501";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			        }
+				// 			        break;
+
+				// 			    default:
+				// 			        $id_month_query = "select id_month from month where id_month = (select min(id_month) from month where id_month > $id_month)";
+				// 			        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 			        while($row = mysqli_fetch_array($month_result)){
+				// 			            $id_month = $row["id_month"];
+				// 			            //echo "month:".$id_month.'<br>';
+				// 			        }
+				// 			}
+				// 		}
+				// 	}
+				// 	else{
+				// 		switch ($id_month) {
+				// 		    case '193060':
+				// 		        $id_month_query = "select id_month from month where id_month = 193007";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '193012':
+				// 		        $id_month_query = "select id_month from month where id_month = 193101";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '193350':
+				// 		        $id_month_query = "select id_month from month where id_month = 193306";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '193312':
+				// 		        $id_month_query = "select id_month from month where id_month = 193401";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '193630':
+				// 		        $id_month_query = "select id_month from month where id_month = 193604";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '193612':
+				// 		        $id_month_query = "select id_month from month where id_month = 193701";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '193870':
+				// 		        $id_month_query = "select id_month from month where id_month = 193808";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '193812':
+				// 		        $id_month_query = "select id_month from month where id_month = 193901";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '194160':
+				// 		        $id_month_query = "select id_month from month where id_month = 194107";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '194112':
+				// 		        $id_month_query = "select id_month from month where id_month = 194201";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '194440':
+				// 		        $id_month_query = "select id_month from month where id_month = 194405";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '194412':
+				// 		        $id_month_query = "select id_month from month where id_month = 194501";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '194720':
+				// 		        $id_month_query = "select id_month from month where id_month = 194703";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '194412':
+				// 		        $id_month_query = "select id_month from month where id_month = 194501";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '194970':
+				// 		        $id_month_query = "select id_month from month where id_month = 194908";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '194912':
+				// 		        $id_month_query = "select id_month from month where id_month = 195001";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '195250':
+				// 		        $id_month_query = "select id_month from month where id_month = 195206";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '195212':
+				// 		        $id_month_query = "select id_month from month where id_month = 195301";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '195530':
+				// 		        $id_month_query = "select id_month from month where id_month = 195504";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '195512':
+				// 		        $id_month_query = "select id_month from month where id_month = 195601";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '195780':
+				// 		        $id_month_query = "select id_month from month where id_month = 195709";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '195712':
+				// 		        $id_month_query = "select id_month from month where id_month = 195801";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '196060':
+				// 		        $id_month_query = "select id_month from month where id_month = 196007";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '196012':
+				// 		        $id_month_query = "select id_month from month where id_month = 196101";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '196340':
+				// 		        $id_month_query = "select id_month from month where id_month = 196305";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '196312':
+				// 		        $id_month_query = "select id_month from month where id_month = 196401";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '196630':
+				// 		        $id_month_query = "select id_month from month where id_month = 196604";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '196612':
+				// 		        $id_month_query = "select id_month from month where id_month = 196701";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '196870':
+				// 		        $id_month_query = "select id_month from month where id_month = 196808";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '196812':
+				// 		        $id_month_query = "select id_month from month where id_month = 196901";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '197150':
+				// 		        $id_month_query = "select id_month from month where id_month = 197106";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '197112':
+				// 		        $id_month_query = "select id_month from month where id_month = 197201";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '197440':
+				// 		        $id_month_query = "select id_month from month where id_month = 197405";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '197412':
+				// 		        $id_month_query = "select id_month from month where id_month = 197501";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '197680':
+				// 		        $id_month_query = "select id_month from month where id_month = 197609";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '197612':
+				// 		        $id_month_query = "select id_month from month where id_month = 197701";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '197960':
+				// 		        $id_month_query = "select id_month from month where id_month = 197907";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '197912':
+				// 		        $id_month_query = "select id_month from month where id_month = 198001";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '198240':
+				// 		        $id_month_query = "select id_month from month where id_month = 198205";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '198212':
+				// 		        $id_month_query = "select id_month from month where id_month = 198301";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '198760':
+				// 		        $id_month_query = "select id_month from month where id_month = 198707";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '198712':
+				// 		        $id_month_query = "select id_month from month where id_month = 198801";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '199050':
+				// 		        $id_month_query = "select id_month from month where id_month = 199006";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '199012':
+				// 		        $id_month_query = "select id_month from month where id_month = 199101";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '199330':
+				// 		        $id_month_query = "select id_month from month where id_month = 199304";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '199312':
+				// 		        $id_month_query = "select id_month from month where id_month = 199401";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '199580':
+				// 		        $id_month_query = "select id_month from month where id_month = 199509";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '199512':
+				// 		        $id_month_query = "select id_month from month where id_month = 199601";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '199850':
+				// 		        $id_month_query = "select id_month from month where id_month = 199806";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '199812':
+				// 		        $id_month_query = "select id_month from month where id_month = 199901";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '200140':
+				// 		        $id_month_query = "select id_month from month where id_month = 200105";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '200112':
+				// 		        $id_month_query = "select id_month from month where id_month = 200201";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '200420':
+				// 		        $id_month_query = "select id_month from month where id_month = 200403";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '200412':
+				// 		        $id_month_query = "select id_month from month where id_month = 200501";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '200670':
+				// 		        $id_month_query = "select id_month from month where id_month = 200608";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '200612':
+				// 		        $id_month_query = "select id_month from month where id_month = 200701";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '200950':
+				// 		        $id_month_query = "select id_month from month where id_month = 200906";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '200912':
+				// 		        $id_month_query = "select id_month from month where id_month = 201001";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '201240':
+				// 		        $id_month_query = "select id_month from month where id_month = 201205";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '201212':
+				// 		        $id_month_query = "select id_month from month where id_month = 201301";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '201490':
+				// 		        $id_month_query = "select id_month from month where id_month = 201410";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '201412':
+				// 		        $id_month_query = "select id_month from month where id_month = 201501";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '201760':
+				// 		        $id_month_query = "select id_month from month where id_month = 201707";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '201712':
+				// 		        $id_month_query = "select id_month from month where id_month = 201801";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '202040':
+				// 		        $id_month_query = "select id_month from month where id_month = 202005";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '202012':
+				// 		        $id_month_query = "select id_month from month where id_month = 202101";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '202320':
+				// 		        $id_month_query = "select id_month from month where id_month = 202303";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '202312':
+				// 		        $id_month_query = "select id_month from month where id_month = 202401";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '202560':
+				// 		        $id_month_query = "select id_month from month where id_month = 202507";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '202512':
+				// 		        $id_month_query = "select id_month from month where id_month = 202601";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '202850':
+				// 		        $id_month_query = "select id_month from month where id_month = 202806";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '202812':
+				// 		        $id_month_query = "select id_month from month where id_month = 202901";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    case '1984100':
+				// 		        $id_month_query = "select id_month from month where id_month = 198411";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+				// 		    case '198412':
+				// 		        $id_month_query = "select id_month from month where id_month = 198501";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		        }
+				// 		        break;
+
+				// 		    default:
+				// 		        $id_month_query = "select id_month from month where id_month = (select min(id_month) from month where id_month > $id_month)";
+				// 		        $month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+				// 		        while($row = mysqli_fetch_array($month_result)){
+				// 		            $id_month = $row["id_month"];
+				// 		            //echo "month:".$id_month.'<br>';
+				// 		        }
+				// 		}
+				// 	}
+				// }
+				
+				echo $id_month;
 				$id_year_query = "select id_year from ten_thousand_years where id_day =" . $id_day;
 				$year_result = mysqli_query($link, $id_year_query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($year_result)){
