@@ -541,14 +541,15 @@
 				}
 
 				//---------------------------
-				echo $id_month." | transday:".$trans_day." | daycounter:".$day_counter;
-				if(!in_array(substr($id_month, 4), array('10','20','30','40','50','60','70','80','90','100','110','120'), true)){
+				echo substr($id_month, 4).$id_month." | transday:".$trans_day." | daycounter:".$day_counter;
+				if(!in_array(substr($id_month, 4), array('20','30','40','50','60','70','80','90','100','110','120'), true)){
 					if($id_month > 191001){
-						$id_month_query = "select id_month from month where id_month = (select max(id_month) from month where id_month < $id_month)";
-						$month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
-						while($row = mysqli_fetch_array($month_result)){
-							$id_month = $row["id_month"];
-							//echo "month:".$id_month.'<br>';
+						if($day_counter < $trans_day){
+							$id_month_query = "select id_month from month where id_month = (select max(id_month) from month where id_month < $id_month)";
+							$month_result = mysqli_query($link, $id_month_query) or die("Error in the consult.." . mysqli_error($link));
+							while($row = mysqli_fetch_array($month_result)){
+								$id_month = $row["id_month"];
+							}
 						}
 					}
 				}
@@ -595,6 +596,9 @@
 							}
 						}
 					}
+				}
+
+				if(!in_array(substr($id_month, 0, 4), array('1930','1933','1936','1938','1941','1944','1947','80','90','100','110','120'), true)){
 				}
 
 				// if($day_counter >= $trans_day){
