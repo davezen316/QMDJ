@@ -9,8 +9,8 @@
 		//echo $_GET['txt_date'] . $time;
 
 		try{
-			//$link = mysqli_connect("localhost", "mykerjay_fsadmin", "p@ssw0rd", "mykerjay_fengshui") or die("Error " . mysql_errno($link));
-			$link = mysqli_connect("mykerjaya.my", "mykerjay_fsadmin", "p@ssw0rd", "mykerjay_fengshui") or die("Error " . mysql_errno($link));
+			$link = mysqli_connect("localhost", "mykerjay_fsadmin", "p@ssw0rd", "mykerjay_fengshui") or die("Error " . mysql_errno($link));
+			//$link = mysqli_connect("mykerjaya.my", "mykerjay_fsadmin", "p@ssw0rd", "mykerjay_fengshui") or die("Error " . mysql_errno($link));
 			mysqli_set_charset($link, "utf8");
 
 			$query = "select * from day where gregorian = '" . $date . "'" ;
@@ -541,7 +541,50 @@
 				}
 
 				//---------------------------
-				echo substr($id_month, 4).$id_month." | transday:".$trans_day." | daycounter:".$day_counter;
+
+				function back_to_previous_month_for_run_month($id_month) {
+					switch(substr($id_month, -2)) {
+						case '10':
+							$id_month = substr($id_month, 0, 4) . '01';
+							break;
+						case '20':
+							$id_month = substr($id_month, 0, 4) . '02';
+							break;
+						case '30':
+							$id_month = substr($id_month, 0, 4) . '03';
+							break;
+						case '40':
+							$id_month = substr($id_month, 0, 4) . '04';
+							break;
+						case '50':
+							$id_month = substr($id_month, 0, 4) . '05';
+							break;
+						case '60':
+							$id_month = substr($id_month, 0, 4) . '06';
+							break;
+						case '70':
+							$id_month = substr($id_month, 0, 4) . '07';
+							break;
+						case '80':
+							$id_month = substr($id_month, 0, 4) . '08';
+							break;
+						case '90':
+							$id_month = substr($id_month, 0, 4) . '09';
+							break;
+						case '100':
+							$id_month = substr($id_month, 0, 4) . '10';
+							break;
+						case '110':
+							$id_month = substr($id_month, 0, 4) . '11';
+							break;
+						case '120':
+							$id_month = substr($id_month, 0, 4) . '12';
+							break;
+					}
+					return $id_month;
+				}
+
+				//echo $id_month." | transday:".$trans_day." | daycounter:".$day_counter. " | time:". $time . " | trans_time:" . $trans_time;
 				if(!in_array(substr($id_month, 4), array('20','30','40','50','60','70','80','90','100','110','120'), true)){
 					if($id_month > 191001){
 						if($day_counter < $trans_day){
@@ -555,45 +598,13 @@
 				}
 				else{
 					if($day_counter <= $trans_day){
-						if($time < $trans_time){
-							switch(substr($id_month, -2)) {
-								case '10':
-									$id_month = substr($id_month, 0, 4) . '01';
-									break;
-								case '20':
-									$id_month = substr($id_month, 0, 4) . '02';
-									break;
-								case '30':
-									$id_month = substr($id_month, 0, 4) . '03';
-									break;
-								case '40':
-									$id_month = substr($id_month, 0, 4) . '04';
-									break;
-								case '50':
-									$id_month = substr($id_month, 0, 4) . '05';
-									break;
-								case '60':
-									$id_month = substr($id_month, 0, 4) . '06';
-									break;
-								case '70':
-									$id_month = substr($id_month, 0, 4) . '07';
-									break;
-								case '80':
-									$id_month = substr($id_month, 0, 4) . '08';
-									break;
-								case '90':
-									$id_month = substr($id_month, 0, 4) . '09';
-									break;
-								case '100':
-									$id_month = substr($id_month, 0, 4) . '10';
-									break;
-								case '110':
-									$id_month = substr($id_month, 0, 4) . '11';
-									break;
-								case '120':
-									$id_month = substr($id_month, 0, 4) . '12';
-									break;
+						if($day_counter == $trans_day){
+							if($time < $trans_time){
+								$id_month = back_to_previous_month_for_run_month($id_month);
 							}
+						}
+						else{
+							$id_month = back_to_previous_month_for_run_month($id_month);
 						}
 					}
 				}
@@ -2064,13 +2075,15 @@
 				$door_pos = $eight_door_initial_position - 1;
 				$eight_door_plate = array("","","","","","","","","");
 
-				$door_query = "SELECT id_door, chinese FROM door WHERE position = $heaven_plate_sequence_initial;";
+				$door_query = "SELECT id_door, chinese, english FROM door WHERE position = $heaven_plate_sequence_initial;";
 				$result = mysqli_query($link, $door_query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($result)){
 					$envoy = $row['chinese'];
+					$envoy_eng = $row['english'];
 					$first_door_counter = $row['id_door'];
 				}
 				$eight_door_plate[$door_pos] = $envoy;
+				$eight_door_plate_eng[$door_pos] = $envoy_eng;
 				$counter = $first_door_counter + 1;
 				$counter = ($counter >= 9 ? 1 : $counter);
 				for($x=0;$x<=6;$x++){
@@ -2079,46 +2092,55 @@
 					$result = mysqli_query($link, $door_query) or die("Error in the consult.." . mysqli_error($link));
 					while($row = mysqli_fetch_array($result)){
 						$next_door = $row['chinese'];
+						$next_door_eng = $row['english'];
 					}
 					//print_r($counter);
 					switch($eight_door_initial_position){
 						case 4:
 						$eight_door_plate[8] = $next_door;
+						$eight_door_plate_eng[8] = $next_door_eng;
 						$eight_door_initial_position = 9;
 						break;
 			
 						case 9:
 						$eight_door_plate[1] = $next_door;
+						$eight_door_plate_eng[1] = $next_door_eng;
 						$eight_door_initial_position = 2;
 						break;
 			
 						case 2:
 						$eight_door_plate[6] = $next_door;
+						$eight_door_plate_eng[6] = $next_door_eng;
 						$eight_door_initial_position = 7;
 						break;
 						
 						case 7:
 						$eight_door_plate[5] = $next_door;
+						$eight_door_plate_eng[5] = $next_door_eng;
 						$eight_door_initial_position = 6;
 						break;
 						
 						case 6:
 						$eight_door_plate[0] = $next_door;
+						$eight_door_plate_eng[0] = $next_door_eng;
 						$eight_door_initial_position = 1;
 						break;
 						
 						case 1:
 						$eight_door_plate[7] = $next_door;
+						$eight_door_plate_eng[7] = $next_door_eng;
 						$eight_door_initial_position = 8;
 						break;
 						
 						case 8:
 						$eight_door_plate[2] = $next_door;
+						$eight_door_plate_eng[2] = $next_door_eng;
 						$eight_door_initial_position = 3;
 						break;
 						
 						case 3:
 						$eight_door_plate[3] = $next_door;
+						$eight_door_plate_eng[3] = $next_door_eng;
 						$eight_door_initial_position = 4;
 						break;
 					}
@@ -2133,25 +2155,28 @@
  				//------------------------------star plotting start here--------------------------------//
  				$star_sequence_initial = $heaven_plate_sequence_initial;
  				$star_center_conflict = $earth_center_conflict;
- 				$star_query = "SELECT id_star, chinese FROM star WHERE position = $heaven_plate_sequence_initial;";
+ 				$star_query = "SELECT id_star, chinese, english FROM star WHERE position = $heaven_plate_sequence_initial;";
  				$result = mysqli_query($link, $star_query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($result)){
 					$first_star_counter = $row['id_star'];
 					if($star_center_conflict != true){
 						$lead_star = $row['chinese'];
+						$lead_star_eng = $row['english'];
 					}
 
 					else{
-						$qin_query = "SELECT id_star, chinese FROM star WHERE position = 5;";
+						$qin_query = "SELECT id_star, chinese, english FROM star WHERE position = 5;";
 						$result = mysqli_query($link, $qin_query) or die("Error in the consult.." . mysqli_error($link));
 						while($row = mysqli_fetch_array($result)){
 							$lead_star = $row['chinese'];
+							$lead_star_eng = $row['english'];
 						}
 
-						$rui_query = "SELECT id_star, chinese FROM star WHERE position = 2;";
+						$rui_query = "SELECT id_star, chinese, english FROM star WHERE position = 2;";
 						$result = mysqli_query($link, $rui_query) or die("Error in the consult.." . mysqli_error($link));
 						while($row = mysqli_fetch_array($result)){
 							$true_star = $row['chinese'];
+							$true_star_eng = $row['english'];
 						}
 					}
 				}
@@ -2163,9 +2188,10 @@
 				$set_hidden_stem = 0;
 				if($star_center_conflict != true){
 					$star_plate[$star_plate_first_pos] = $lead_star;
+					$star_plate_eng[$star_plate_first_pos] = $lead_star_eng;
 				}
 				else{
-					$star_plate[$star_plate_first_pos] = $true_star."<br>".$lead_star."&nbsp;&nbsp;";
+					$star_plate[$star_plate_first_pos] = $true_star."<br/><span style='font-size: 12px'>".$true_star_eng."</span>".$lead_star."&nbsp;&nbsp;";
 					$hidden_tian[$star_plate_first_pos] = $structure[4]['chinese'];
 				}
 				//$star_plate[$star_plate_first_pos] = ($star_center_conflict != true? $lead_star : $true_star."<br>".$lead_star."&nbsp;&nbsp;");
@@ -2175,75 +2201,87 @@
 				for($x=0;$x<=7;$x++){
 					$set_hidden_stem = 0;
 					$star_counter = ($star_counter >= 9 ? 1 : $star_counter);
-					$star_query = "SELECT chinese FROM star WHERE id_star = $star_counter;";
+					$star_query = "SELECT chinese, english FROM star WHERE id_star = $star_counter;";
 					$result = mysqli_query($link, $star_query) or die("Error in the consult.." . mysqli_error($link));
 					while($row = mysqli_fetch_array($result)){
 						if($star_counter == 6){
 								$up_star = $row['chinese'];
-								$rui_query = "SELECT id_star, chinese FROM star WHERE position = 5;";
+								$up_star_eng = $row['english'];
+								$rui_query = "SELECT id_star, chinese, english FROM star WHERE position = 5;";
 								$result = mysqli_query($link, $rui_query) or die("Error in the consult.." . mysqli_error($link));
 								while($row = mysqli_fetch_array($result)){
 									$down_star = $row['chinese'];
+									$down_star_eng = $row['english'];
 								}
-								$next_star = $up_star."<br>".$down_star."&nbsp;&nbsp;";
+								$next_star = $up_star."<span style='font-size: 10px'>".$up_star_eng."</span><br/>".$down_star."<span style='font-size: 10px'>".$down_star_eng."</span>";
 								$set_hidden_stem = 1;
 							// }
 							//$next_star = ($star_center_conflict!=true? $row['chinese'] : $true_star."<br>".$lead_star."&nbsp;&nbsp;");
 						}
 						else{
 							$next_star = $row['chinese'];
+							$next_star_eng = $row['english'];
 						}
 					}
 
 					switch($star_plate_initial_pos){
 						case 4:
 						$star_plate[8] = $next_star;
-						$hidden_tian[8] = ($set_hidden_stem == 1? $structure[4]['chinese'] : "");
+						$star_plate_eng[8] = ($star_counter != 6 ? $next_star_eng : null);
+						$hidden_tian[8] = ($set_hidden_stem == 1 ? $structure[4]['chinese'] : "");
 						$star_plate_initial_pos = 9;
 						break;
 			
 						case 9:
 						$star_plate[1] = $next_star;
-						$hidden_tian[1] = ($set_hidden_stem == 1? $structure[4]['chinese'] : "");
+						$star_plate_eng[1] = ($star_counter != 6 ? $next_star_eng : null);
+						$hidden_tian[1] = ($set_hidden_stem == 1 ? $structure[4]['chinese'] : "");
 						$star_plate_initial_pos = 2;
 						break;
 			
 						case 2:
 						$star_plate[6] = $next_star;
-						$hidden_tian[6] = ($set_hidden_stem == 1? $structure[4]['chinese'] : "");
+						$star_plate_eng[6] = ($star_counter != 6 ? $next_star_eng : null);
+						$hidden_tian[6] = ($set_hidden_stem == 1 ? $structure[4]['chinese'] : "");
 						$star_plate_initial_pos = 7;
 						break;
 						
 						case 7:
 						$star_plate[5] = $next_star;
-						$hidden_tian[5] = ($set_hidden_stem == 1? $structure[4]['chinese'] : "");
+						$star_plate_eng[5] = ($star_counter != 6 ? $next_star_eng : null);
+						$hidden_tian[5] = ($set_hidden_stem == 1 ? $structure[4]['chinese'] : "");
 						$star_plate_initial_pos = 6;
 						break;
 						
 						case 6:
 						$star_plate[0] = $next_star;
-						$hidden_tian[0] = ($set_hidden_stem == 1? $structure[4]['chinese'] : "");
+						$star_plate_eng[0] = ($star_counter != 6 ? $next_star_eng : null);
+						$hidden_tian[0] = ($set_hidden_stem == 1 ? $structure[4]['chinese'] : "");
 						$star_plate_initial_pos = 1;
 						break;
 						
 						case 1:
 						$star_plate[7] = $next_star;
-						$hidden_tian[7] = ($set_hidden_stem == 1? $structure[4]['chinese'] : "");
+						$star_plate_eng[7] = ($star_counter != 6 ? $next_star_eng : null);
+						$hidden_tian[7] = ($set_hidden_stem == 1 ? $structure[4]['chinese'] : "");
 						$star_plate_initial_pos = 8;
 						break;
 						
 						case 8:
 						$star_plate[2] = $next_star;
-						$hidden_tian[2] = ($set_hidden_stem == 1? $structure[4]['chinese'] : "");
+						$star_plate_eng[2] = ($star_counter != 6 ? $next_star_eng : null);
+						$hidden_tian[2] = ($set_hidden_stem == 1 ? $structure[4]['chinese'] : "");
 						$star_plate_initial_pos = 3;
 						break;
 						
 						case 3:
 						$star_plate[3] = $next_star;
-						$hidden_tian[3] = ($set_hidden_stem == 1? $structure[4]['chinese'] : "");
+						$star_plate_eng[3] = ($star_counter != 6 ? $next_star_eng : null);
+						$hidden_tian[3] = ($set_hidden_stem == 1 ? $structure[4]['chinese'] : "");
 						$star_plate_initial_pos = 4;
 						break;
 					}
+
 					$star_counter++;
 				}
 
