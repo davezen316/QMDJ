@@ -9,8 +9,8 @@
 		//echo $_GET['txt_date'] . $time;
 
 		try{
-			$link = mysqli_connect("localhost", "mykerjay_fsadmin", "p@ssw0rd", "mykerjay_fengshui") or die("Error " . mysql_errno($link));
-			//$link = mysqli_connect("mykerjaya.my", "mykerjay_fsadmin", "p@ssw0rd", "mykerjay_fengshui") or die("Error " . mysql_errno($link));
+			//$link = mysqli_connect("localhost", "mykerjay_fsadmin", "p@ssw0rd", "mykerjay_fengshui") or die("Error " . mysql_errno($link));
+			$link = mysqli_connect("mykerjaya.my", "mykerjay_fsadmin", "p@ssw0rd", "mykerjay_fengshui") or die("Error " . mysql_errno($link));
 			mysqli_set_charset($link, "utf8");
 
 			$query = "select * from day where gregorian = '" . $date . "'" ;
@@ -1757,51 +1757,63 @@
 					//echo "year:".$id_year.'<br>';
 				}
 
-				$query = "select d.heaven, hs.chinese from day d left join heavenly_stem hs on d.heaven = hs.id_heavenly_stem where id_day=" . $id_day;
+				$query = "select d.heaven, hs.chinese, hs.pinyin, hs.color from day d left join heavenly_stem hs on d.heaven = hs.id_heavenly_stem where id_day=" . $id_day;
 				$result = mysqli_query($link, $query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($result)){
 					$id_day_heaven = $row['heaven'];
 					$day_heaven = $row["chinese"];
+					$day_heaven_english = $row["pinyin"];
+					$day_heaven_color = $row["color"];
 					//echo "day_heaven:".$day_heaven.'<br>';
 				}
 
-				$query = "select d.earth, es.chinese from day d left join earthly_stem es on d.earth = es.id_earthly_stem where id_day = " . $id_day;
+				$query = "select d.earth, es.chinese, es.pinyin, es.color from day d left join earthly_stem es on d.earth = es.id_earthly_stem where id_day = " . $id_day;
 				$result = mysqli_query($link, $query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($result)){
 					$id_day_earth = $row['earth'];
 					$day_earth = $row["chinese"];
+					$day_earth_english = $row["pinyin"];
+					$day_earth_color = $row["color"];
 					//echo "day_earth:".$day_earth.'<br>';
 				}
 
-				$query = "select m.heaven, hs.chinese from month m left join heavenly_stem hs on m.heaven = hs.id_heavenly_stem where id_month=" . $id_month;
+				$query = "select m.heaven, hs.chinese, hs.pinyin, hs.color from month m left join heavenly_stem hs on m.heaven = hs.id_heavenly_stem where id_month=" . $id_month;
 				$result = mysqli_query($link, $query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($result)){
 					$id_month_heaven = $row["heaven"];
 					$month_heaven = $row["chinese"];
+					$month_heaven_english = $row["pinyin"];
+					$month_heaven_color = $row["color"];
 					//echo "month_heaven:".$month_heaven.'<br>';
 				}
 
-				$query = "select m.earth, es.chinese from month m left join earthly_stem es on m.earth = es.id_earthly_stem where id_month = " . $id_month;
+				$query = "select m.earth, es.chinese, es.pinyin, es.color from month m left join earthly_stem es on m.earth = es.id_earthly_stem where id_month = " . $id_month;
 				$result = mysqli_query($link, $query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($result)){
 					$id_month_earth = $row["earth"];
 					$month_earth = $row["chinese"];
+					$month_earth_english = $row["pinyin"];
+					$month_earth_color = $row["color"];
 					//echo "month_earth:".$month_earth.'<br>';
 				}
 
-				$query = "select y.heaven, hs.chinese from year y left join heavenly_stem hs on y.heaven = hs.id_heavenly_stem where id_year=" . $id_year;
+				$query = "select y.heaven, hs.chinese, hs.pinyin, hs.color from year y left join heavenly_stem hs on y.heaven = hs.id_heavenly_stem where id_year=" . $id_year;
 				$result = mysqli_query($link, $query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($result)){
 					$id_year_heaven = $row["heaven"];
 					$year_heaven = $row["chinese"];
+					$year_heaven_english = $row["pinyin"];
+					$year_heaven_color = $row["color"];
 					//echo "year_heaven:".$year_heaven.'<br>';
 				}
 
-				$query = "select y.earth, es.chinese from year y left join earthly_stem es on y.earth = es.id_earthly_stem where id_year = " . $id_year;
+				$query = "select y.earth, es.chinese, es.pinyin, es.color from year y left join earthly_stem es on y.earth = es.id_earthly_stem where id_year = " . $id_year;
 				$result = mysqli_query($link, $query) or die("Error in the consult.." . mysqli_error($link));
 				while($row = mysqli_fetch_array($result)){
 					$id_year_earth = $row["earth"];
 					$year_earth = $row["chinese"];
+					$year_earth_english = $row["pinyin"];
+					$year_earth_color = $row["color"];
 					//echo "year_earth:".$year_earth.'<br>';
 				}
 
@@ -1816,7 +1828,9 @@
 				switch ($hour){
 					case '23':
 
-						$query = "SELECT hs.id_heavenly_stem , es.id_earthly_stem, hs.chinese AS heaven, es.chinese AS earth
+						$query = "SELECT hs.id_heavenly_stem , es.id_earthly_stem, 
+									hs.chinese AS heaven, hs.pinyin AS heaven_english, hs.color AS heaven_color, 
+									es.chinese AS earth, es.pinyin AS earth_pinyin, es.color AS earth_color
 									FROM five_rat_chasing_day frcd
 									LEFT JOIN heavenly_stem hs ON frcd.heaven = hs.id_heavenly_stem 
 									LEFT JOIN earthly_stem es ON frcd.hour = es.id_earthly_stem
@@ -1827,7 +1841,11 @@
 							$id_hour_heaven = $row["id_heavenly_stem"];
 							$id_hour_earth = $row["id_earthly_stem"];
 							$hour_heaven = $row["heaven"];
+							$hour_heaven_english = $row["heaven_english"];
+							$hour_heaven_color = $row["heaven_color"];
 							$hour_earth = $row["earth"];
+							$hour_earth_english = $row["earth_pinyin"];
+							$hour_earth_color = $row["earth_color"];
 						}
 						
 						$query = "SELECT hs.id_heavenly_stem , hs.chinese AS heaven
@@ -1844,7 +1862,7 @@
 
 						break;
 					case '00':
-						$query = "SELECT hs.id_heavenly_stem , es.id_earthly_stem, hs.chinese AS heaven, es.chinese AS earth
+						$query = "SELECT hs.id_heavenly_stem , es.id_earthly_stem, hs.chinese AS heaven, hs.pinyin AS heaven_english, hs.color AS heaven_color, es.chinese AS earth, es.pinyin AS earth_pinyin, es.color AS earth_color
 							FROM five_rat_chasing_day frcd
 							LEFT JOIN heavenly_stem hs ON frcd.heaven = hs.id_heavenly_stem 
 							LEFT JOIN earthly_stem es ON frcd.hour = es.id_earthly_stem
@@ -1854,12 +1872,16 @@
 							$id_hour_heaven = $row["id_heavenly_stem"];
 							$id_hour_earth = $row["id_earthly_stem"];
 							$hour_heaven = $row["heaven"];
+							$hour_heaven_english = $row["heaven_english"];
+							$hour_heaven_color = $row["heaven_color"];
 							$hour_earth = $row["earth"];
+							$hour_earth_english = $row["earth_pinyin"];
+							$hour_earth_color = $row["earth_color"];
 						}
 						break;
 
 					default:
-						$query = "SELECT hs.id_heavenly_stem , es.id_earthly_stem, hs.chinese AS heaven, es.chinese AS earth
+						$query = "SELECT hs.id_heavenly_stem , es.id_earthly_stem, hs.chinese AS heaven, hs.pinyin AS heaven_english, hs.color AS heaven_color, es.chinese AS earth, es.pinyin AS earth_pinyin, es.color AS earth_color
 							FROM five_rat_chasing_day frcd
 							LEFT JOIN heavenly_stem hs ON frcd.heaven = hs.id_heavenly_stem 
 							LEFT JOIN earthly_stem es ON frcd.hour = es.id_earthly_stem
@@ -1872,12 +1894,16 @@
 							$id_hour_heaven = $row["id_heavenly_stem"];
 							$id_hour_earth = $row["id_earthly_stem"];
 							$hour_heaven = $row["heaven"];
+							$hour_heaven_english = $row["heaven_english"];
+							$hour_heaven_color = $row["heaven_color"];
 							$hour_earth = $row["earth"];
+							$hour_earth_english = $row["earth_pinyin"];
+							$hour_earth_color = $row["earth_color"];
 						}
 					}
 				}
 
-				$query_lead_stem = "SELECT lead_stem, hs.chinese
+				$query_lead_stem = "SELECT lead_stem, hs.chinese, hs.pinyin, hs.color
 							FROM stream s
 							LEFT JOIN sixty_jia_zi sjz ON s.id_stream = sjz.stream
 							LEFT JOIN heavenly_stem hs ON s.lead_stem =hs.id_heavenly_stem
@@ -1886,6 +1912,8 @@
 				while($row = mysqli_fetch_array($result)){
 					$id_lead_stem = $row["lead_stem"];
 					$lead_stem = $row["chinese"];
+					$lead_stem_english = $row["pinyin"];
+					$lead_stem_color = $row["color"];
 				}
 				//------------------------------horse star calculation start here------------------------------//
 				$query_horse_star = "select es.chinese from horse_star hstar left join earthly_stem es on hstar.horse_star = es.id_earthly_stem where hstar.hour = $id_hour_earth;";
