@@ -565,6 +565,16 @@ span.tab{
     pading: 0 40px; /* Or desired space*/
 }
 
+font.chinese_char{
+	font-size: 20px;
+	margin: 0;
+}
+
+.english{
+	font-size: 10px;
+	margin: 0;
+}
+
 .upperleft{
 	text-align: left;
 	border: none;

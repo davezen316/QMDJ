@@ -140,16 +140,16 @@
 														<td width = '100px'>Year</td>
 													</tr>
 													<tr>
-														<td height = '25px'><font color=<?php echo $hour_heaven_color?>><?php echo(isset($hour_heaven) ?  $hour_heaven.' '.$hour_heaven_english : '' )?></font></td>
-														<td height = '25px'><font color=<?php echo $day_heaven_color?>><?php echo(isset($id_day) ?  $day_heaven.' '.$day_heaven_english : '' )?></font></td>
-														<td height = '25px'><font color=<?php echo $month_heaven_color?>><?php echo(isset($id_day) ?  $month_heaven.' '.$month_heaven_english : '' )?></font></td>
-														<td height = '25px'><font color=<?php echo $year_heaven_color?>><?php echo(isset($id_day) ?  $year_heaven.' '.$year_heaven_english : '' )?></font></td>
+														<td height = '25px'><?php echo(isset($hour_heaven) ?  '<font color="'.$hour_heaven_color.'">'.$hour_heaven.' '.$hour_heaven_english.'</font>' : '' )?></font></td>
+														<td height = '25px'><?php echo(isset($id_day) ?  '<font color="'.$day_heaven_color.'">'.$day_heaven.' '.$day_heaven_english.'</font>' : '' )?></font></td>
+														<td height = '25px'><?php echo(isset($id_day) ?  '<font color="'.$month_heaven_color.'">'.$month_heaven.' '.$month_heaven_english.'</font>' : '' )?></font></td>
+														<td height = '25px'><?php echo(isset($id_day) ?  '<font color="'.$year_heaven_color.'">'.$year_heaven.' '.$year_heaven_english.'</font>' : '' )?></font></td>
 													</tr>
 													<tr>
-														<td height = '25px'><font color=<?php echo $hour_earth_color?>><?php echo(isset($hour_earth) ?  $hour_earth.' '.$hour_earth_english : '' )?></font></td>
-														<td height = '25px'><font color=<?php echo $day_earth_color?>><?php echo(isset($id_day) ?  $day_earth.' '.$day_earth_english : '')?></font></td>
-														<td height = '25px'><font color=<?php echo $month_earth_color?>><?php echo(isset($id_day) ?  $month_earth.' '.$month_earth_english : '')?></font></td>
-														<td height = '25px'><font color=<?php echo $year_earth_color?>><?php echo(isset($id_day) ?  $year_earth.' '.$year_earth_english : '')?></font></td>
+														<td height = '25px'><?php echo(isset($hour_earth) ? '<font color="'.$hour_earth_color.'">'.$hour_earth.' '.$hour_earth_english.'</font>' : '' )?></font></td>
+														<td height = '25px'><?php echo(isset($id_day) ? '<font color="'.$day_earth_color.'">'.$day_earth.' '.$day_earth_english.'</font>' : '')?></font></td>
+														<td height = '25px'><?php echo(isset($id_day) ? '<font color="'.$month_earth_color.'">'.$month_earth.' '.$month_earth_english.'</font>' : '')?></font></td>
+														<td height = '25px'><?php echo(isset($id_day) ? '<font color="'.$year_earth_color.'">'.$year_earth.' '.$year_earth_english.'</font>' : '')?></font></td>
 													</tr>
 												</table>
 												</td>
@@ -199,28 +199,28 @@
 														<td class = "border" >
 															<table class = 'none' <?php echo (isset($structure_yin_yang) ? ($structure_yin_yang == "Yin" ? 'bgcolor="#B8B8E6"' : '') : '');?>>
 																<tr>
-																	<td class = 'upperleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($heaven_plate[3]) ?  $heaven_plate[3] : '')?><br>&nbsp;&nbsp;&nbsp;<?php echo(isset($hidden_tian[3]) ?  $hidden_tian[3] : '')?></span></td>
+																	<td class = 'upperleft' width="58px" height="50px"><?php echo(isset($heaven_plate[3]) ? '<font class="chinese_char" color='.$heaven_plate_color[3].'>'.$heaven_plate[3].'<span class="english">'.$heaven_plate_english[3].'</span></font>' : '')?><br>&nbsp;&nbsp;&nbsp;<font class="chinese_char"><?php echo(isset($hidden_tian[3]) ?  '<font color='.$hidden_tian_color[3].'>'.$hidden_tian[3].'<span class="english">'.$hidden_tian_english[3].'</span></font>' : '')?></font></td>
 																	<td class = 'nonetop' width="58px" height="50px" rowspan='3'><?php echo(isset($good_special_structure[3]) ?  '<font size="2" color="red">'.$good_special_structure[3].'</font>' : '')?><?php echo(isset($bad_special_structure[3]) ?  '<font size="2" color="blue">'.$bad_special_structure[3].'</font>' : '')?></td>
-																	<td class = 'upperright' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($deity[3]) ?  $deity[3] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($deity_eng[3]) ?  $deity_eng[3] : '')?></span></td>
+																	<td class = 'upperright' width="58px" height="50px"><?php echo(isset($deity[3]) ? '<font class="chinese_char" color='.$deity_color[3].'>'.$deity[3].'<br/><span class="english">'.$deity_eng[3].'</span></font>' : '')?></td>
 																</tr>
 																<tr>
 																	<td class = 'noneleft' width="58px" height="50px"><font color="green">Wood</font></td>
 																	<!-- <td class = 'none'></td> -->
-																	<td class = 'noneright'><span style="font-size: 20px"><?php echo(isset($star_plate[3]) ?  $star_plate[3] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($star_plate_eng[3]) ?  $star_plate_eng[3] : '')?></span></td>
+																	<td class = 'noneright'><?php echo(isset($structure[3]['chinese']) ? '<font class="chinese_char" color='.$star_plate_color[3].'>'.$star_plate[3].'<br/><span class="english">'.$star_plate_eng[3].'</span></font>' : '')?></span></td>
 																</tr>
 																<tr>
-																	<td class = 'bottomleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($structure[3]['chinese']) ?  $structure[3]['chinese'] : '')?></span></td>
+																	<td class = 'bottomleft' width="58px" height="50px"><?php echo(isset($structure[3]['chinese']) ? '<font class="chinese_char" color='.$structure[3]['color'].'>'.$structure[3]['chinese'].'<br/><span class="english">'.$structure[3]['pinyin'].'</span></font>' : '')?></td>
 																	<!-- <td class = 'nonebottom'>Negative</td> -->
-																	<td class = 'bottomright'><span style="font-size: 20px"><?php echo(isset($eight_door_plate[3]) ?  $eight_door_plate[3] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($eight_door_plate_eng[3]) ?  $eight_door_plate_eng[3] : '')?></span></td>
+																	<td class = 'bottomright'><?php echo(isset($eight_door_plate[3]) ? '<font class="chinese_char" color='.$eight_door_plate_color[3].'>'.$eight_door_plate[3].'<br/><span class="english">'.$eight_door_plate_english[3].'</span></font>' : '')?></td>
 																</tr>
 															</table>
 														</td>
 														<td class = "border" >
 															<table class = 'none' <?php echo(isset($structure_yin_yang) ? ($structure_yin_yang == "Yang" ? 'bgcolor="#B8B8E6"' : '') : '');?>>
 																<tr>
-																	<td class = 'upperleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($heaven_plate[8]) ?  $heaven_plate[8] : '')?><br>&nbsp;&nbsp;&nbsp;<?php echo(isset($hidden_tian[8]) ?  $hidden_tian[8] : '')?></span></td>
+																	<td class = 'upperleft' width="58px" height="50px"><?php echo(isset($heaven_plate[8]) ?  '<font class="chinese_char" color='.$heaven_plate_color[8].'>'.$heaven_plate[8].'<span class="english">'.$heaven_plate_english[8].'</span></font>' : '')?><br>&nbsp;&nbsp;&nbsp;<font class="chinese_char"><?php echo(isset($hidden_tian[8]) ?  '<font color='.$hidden_tian_color[8].'>'.$hidden_tian[8].'<span class="english">'.$hidden_tian_english[8].'</span></font>' : '')?></font></td>
 																	<td class = 'nonetop' width="58px" height="50px" rowspan='3'><?php echo(isset($good_special_structure[8]) ?  '<font size="2" color="red">'.$good_special_structure[8].'</font>' : '')?><?php echo(isset($bad_special_structure[8]) ?  '<font size="2" color="blue">'.$bad_special_structure[8].'</font>' : '')?></td>
-																	<td class = 'upperright' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($deity[8]) ?  $deity[8] : '')?><br/><span style="font-size: 10px"><?php echo(isset($deity_eng[8]) ?  $deity_eng[8] : '')?></span></span></td>
+																	<td class = 'upperright' width="58px" height="50px"><?php echo(isset($deity[8]) ? '<font class="chinese_char" color='.$deity_color[8].'>'.$deity[8].'<br/><span class="english">'.$deity_eng[8].'</span></font>' : '')?></td>
 																</tr>
 																<tr>
 																	<td class = 'noneleft' width="58px" height="50px"><font color="red">Fire</font></td>
@@ -228,18 +228,18 @@
 																	<td class = 'noneright'><span style="font-size: 20px"><?php echo(isset($star_plate[8]) ?  $star_plate[8] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($star_plate_eng[8]) ?  $star_plate_eng[8] : '')?></span></td>
 																</tr>
 																<tr>
-																	<td class = 'bottomleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($structure[8]['chinese']) ?  $structure[8]['chinese'] : '')?></span></td>
+																	<td class = 'bottomleft' width="58px" height="50px"><?php echo(isset($structure[8]['chinese']) ? '<font class="chinese_char" color='.$structure[8]['color'].'>'.$structure[8]['chinese'].'<br/><span class="english">'.$structure[8]['pinyin'].'</span></font>' : '')?></td>
 																	<!-- <td class = 'nonebottom'>Negative</td> -->
-																	<td class = 'bottomright'><span style="font-size: 20px"><?php echo(isset($eight_door_plate[8]) ?  $eight_door_plate[8] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($eight_door_plate_eng[8]) ?  $eight_door_plate_eng[8] : '')?></span></td>
+																	<td class = 'bottomright'><?php echo (isset($eight_door_plate[8]) ? '<font class="chinese_char" color='.$eight_door_plate_color[8].'>'.$eight_door_plate[8].'<br/><span class="english">'.$eight_door_plate_english[8].'</span></font>' : '')?></td>
 																</tr>
 															</table>
 														</td>
 														<td class = "border" >
 															<table class = 'none' <?php echo(isset($structure_yin_yang) ? ($structure_yin_yang == "Yang" ? 'bgcolor="#B8B8E6"' : '') : '')?>>
 																<tr>
-																	<td class = 'upperleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($heaven_plate[1]) ?  $heaven_plate[1] : '')?><br>&nbsp;&nbsp;&nbsp;<?php echo(isset($hidden_tian[1]) ?  $hidden_tian[1] : '')?></span></td>
+																	<td class = 'upperleft' width="58px" height="50px"><?php echo(isset($heaven_plate[1]) ?  '<font class="chinese_char" color='.$heaven_plate_color[1].'>'.$heaven_plate[1].'<span class="english">'.$heaven_plate_english[1].'</span></font>' : '')?><br>&nbsp;&nbsp;&nbsp;<font class="chinese_char"><?php echo(isset($hidden_tian[1]) ?  '<font color='.$hidden_tian_color[1].'>'.$hidden_tian[1].'<span class="english">'.$hidden_tian_english[1].'</span></font>' : '')?></font></td>
 																	<td class = 'nonetop' width="58px" height="50px" rowspan='3'><?php echo(isset($good_special_structure[1]) ?  '<font size="2" color="red">'.$good_special_structure[1].'</font>' : '')?><?php echo(isset($bad_special_structure[1]) ?  '<font size="2" color="blue">'.$bad_special_structure[1].'</font>' : '')?></td>
-																	<td class = 'upperright' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($deity[1]) ?  $deity[1] : '')?><br/><span style="font-size: 10px"><?php echo(isset($deity_eng[1]) ?  $deity_eng[1] : '')?></span></span></td>
+																	<td class = 'upperright' width="58px" height="50px"><?php echo(isset($deity[1]) ? '<font class="chinese_char" color='.$deity_color[1].'>'.$deity[1].'<br/><span class="english">'.$deity_eng[1].'</span></font>' : '')?></td>
 																</tr>
 																<tr>
 																	<td class = 'noneleft' width="58px" height="50px"><font color="brown">Earth</font></td>
@@ -247,9 +247,9 @@
 																	<td class = 'noneright'><span style="font-size: 20px"><?php echo(isset($star_plate[1]) ?  $star_plate[1] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($star_plate_eng[1]) ?  $star_plate_eng[1] : '')?></span></td>
 																</tr>
 																<tr>
-																	<td class = 'bottomleft' width="58px" height="50px"><span style="font-size: 20px">&nbsp;&nbsp;&nbsp;<?php echo(isset($structure[4]['chinese']) ?  $structure[4]['chinese'] : '')?><br><?php echo(isset($structure[1]['chinese']) ?  $structure[1]['chinese'] : '')?></span></td>
+																	<td class = 'bottomleft' width="58px" height="50px"><?php echo(isset($structure[4]['chinese']) ? '<font class="chinese_char" color='.$structure[4]['color'].'>'.$structure[4]['chinese'].'<span class="english">'.$structure[4]['pinyin'].'</span></font>' : '')?><br/>&nbsp;&nbsp;&nbsp;<?php echo(isset($structure[1]['chinese']) ? '<font class="chinese_char" color='.$structure[1]['color'].'>'.$structure[1]['chinese'].'<span class="english">'.$structure[1]['pinyin'].'</span></font>' : '')?></span></td>
 																	<!-- <td class = 'nonebottom'>Negative</td> -->
-																	<td class = 'bottomright'><span style="font-size: 20px"><?php echo(isset($eight_door_plate[1]) ?  $eight_door_plate[1] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($eight_door_plate_eng[1]) ?  $eight_door_plate_eng[1] : '')?></span></td>
+																	<td class = 'bottomright'><?php echo (isset($eight_door_plate[1]) ? '<font class="chinese_char" color='.$eight_door_plate_color[1].'>'.$eight_door_plate[1].'<br/><span class="english">'.$eight_door_plate_english[1].'</span></font>' : '')?></span></td>
 																</tr>
 															</table>
 														</td>
@@ -260,9 +260,9 @@
 														<td class = "border" >
 															<table class = 'none' <?php echo(isset($structure_yin_yang) ? ($structure_yin_yang == "Yin" ? 'bgcolor="#B8B8E6"' : '') : '')?>>
 																<tr>
-																	<td class = 'upperleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($heaven_plate[2]) ?  $heaven_plate[2] : '')?><br>&nbsp;&nbsp;&nbsp;<?php echo(isset($hidden_tian[2]) ?  $hidden_tian[2] : '')?></span></td>
+																	<td class = 'upperleft' width="58px" height="50px"><?php echo(isset($heaven_plate[2]) ?  '<font class="chinese_char" color='.$heaven_plate_color[2].'>'.$heaven_plate[2].'<span class="english">'.$heaven_plate_english[2].'</span></font>' : '')?><br>&nbsp;&nbsp;&nbsp;<?php echo(isset($hidden_tian[2]) ?  '<font color='.$hidden_tian_color[2].'>'.$hidden_tian[2].'<span class="english">'.$hidden_tian_english[2].'</span></font>' : '')?></span></td>
 																	<td class = 'nonetop' width="58px" height="50px" rowspan='3'><?php echo(isset($good_special_structure[2]) ?  '<font size="2" color="red">'.$good_special_structure[2].'</font>' : '')?><?php echo(isset($bad_special_structure[2]) ?  '<font size="2" color="blue">'.$bad_special_structure[2].'</font>' : '')?></td>
-																	<td class = 'upperright' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($deity[2]) ?  $deity[2] : '')?><br/><span style="font-size: 10px"><?php echo(isset($deity_eng[2]) ?  $deity_eng[2] : '')?></span></span></td>
+																	<td class = 'upperright' width="58px" height="50px"><?php echo(isset($deity[2]) ? '<font class="chinese_char" color='.$deity_color[2].'>'.$deity[2].'<br/><span class="english">'.$deity_eng[2].'</span></font>' : '')?></td>
 																</tr>
 																<tr>
 																	<td class = 'noneleft' width="58px" height="50px"><font color="green">Wood</font></td>
@@ -270,16 +270,16 @@
 																	<td class = 'noneright'><span style="font-size: 20px"><?php echo(isset($star_plate[2]) ?  $star_plate[2] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($star_plate_eng[2]) ?  $star_plate_eng[2] : '')?></span></td>
 																</tr>
 																<tr>
-																	<td class = 'bottomleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($structure[2]['chinese']) ?  $structure[2]['chinese'] : '')?></span></td>
+																	<td class = 'bottomleft' width="58px" height="50px"><?php echo(isset($structure[2]['chinese']) ? '<font class="chinese_char" color='.$structure[2]['color'].'>'.$structure[2]['chinese'].'<br/><span class="english">'.$structure[2]['pinyin'].'</span></font>' : '')?></td>
 																	<!-- <td class = 'nonebottom'>Negative</td> -->
-																	<td class = 'bottomright'><span style="font-size: 20px"><?php echo(isset($eight_door_plate[2]) ?  $eight_door_plate[2] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($eight_door_plate_eng[2]) ?  $eight_door_plate_eng[2] : '')?></span></td>
+																	<td class = 'bottomright'><?php echo (isset($eight_door_plate[2]) ? '<font class="chinese_char" color='.$eight_door_plate_color[2].'>'.$eight_door_plate[2].'<br/><span class="english">'.$eight_door_plate_english[2].'</span></font>' : '')?></span></td>
 																</tr>
 															</table>
 														</td>
 														<td class = "border" >
 															<table class = 'none'>
 																<tr>
-																	<td class = 'upperleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($structure[4]['chinese']) ?  $structure[4]['chinese'] : '')?></span></td>
+																	<td class = 'upperleft' width="58px" height="50px"><?php echo(isset($structure[4]['chinese']) ?  '<font class="chinese_char" color='.$structure[4]['color'].'>'.$structure[4]['chinese'].'<br/><span class="english">'.$structure[4]['pinyin'].'</span></font>' : '')?></td>
 																	<td class = 'nonetop' width="58px" height="50px"></td>
 																	<td class = 'upperright' width="58px" height="50px"></td>
 																</tr>
@@ -287,7 +287,7 @@
 																	<td class = 'none' colspan = '3' width = '175px' height = '50px'>MODing Your Zen <br>Metaphysicssecrets.com</td>
 																</tr>
 																<tr>
-																	<td class = 'bottomleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($structure[4]['chinese']) ?  $structure[4]['chinese'] : '')?></span></td>
+																	<td class = 'bottomleft' width="58px" height="50px"><?php echo(isset($structure[4]['chinese']) ?  '<font class="chinese_char" color='.$structure[4]['color'].'>'.$structure[4]['chinese'].'<br/><span class="english">'.$structure[4]['pinyin'].'</span></font>' : '')?></td>
 																	<td class = 'nonebottom'></td>
 																	<td class = 'bottomright'></td>
 																</tr>
@@ -296,9 +296,9 @@
 														<td class = "border" >
 															<table class = 'none' <?php echo(isset($structure_yin_yang) ? ($structure_yin_yang == "Yang" ? 'bgcolor="#B8B8E6"' : '') : '')?>>
 																<tr>
-																	<td class = 'upperleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($heaven_plate[6]) ?  $heaven_plate[6] : '')?><br>&nbsp;&nbsp;&nbsp;<?php echo(isset($hidden_tian[6]) ?  $hidden_tian[6] : '')?></span></td>
+																	<td class = 'upperleft' width="58px" height="50px"><?php echo(isset($heaven_plate[6]) ? '<font class="chinese_char" color='.$heaven_plate_color[6].'>'.$heaven_plate[6].'<span class="english">'.$heaven_plate_english[6].'</span></font>' : '')?><br>&nbsp;&nbsp;&nbsp;<font class="chinese_char"><?php echo(isset($hidden_tian[6]) ?  '<font color='.$hidden_tian_color[6].'>'.$hidden_tian[6].'<span class="english">'.$hidden_tian_english[6].'</span></font>' : '')?></font></td>
 																	<td class = 'nonetop' width="58px" height="50px" rowspan='3'><?php echo(isset($good_special_structure[6]) ?  '<font size="2" color="red">'.$good_special_structure[6].'</font>' : '')?><?php echo(isset($bad_special_structure[6]) ?  '<font size="2" color="blue">'.$bad_special_structure[6].'</font>' : '')?></td>
-																	<td class = 'upperright' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($deity[6]) ?  $deity[6] : '')?><br/><span style="font-size: 10px"><?php echo(isset($deity_eng[6]) ?  $deity_eng[6] : '')?></span></span></td>
+																	<td class = 'upperright' width="58px" height="50px"><?php echo(isset($deity[6]) ? '<font class="chinese_char" color='.$deity_color[6].'>'.$deity[6].'<br/><span class="english">'.$deity_eng[6].'</span></font>' : '')?></td>
 																</tr>
 																<tr>
 																	<td class = 'noneleft' width="58px" height="50px"><font color="orange">Metal</font></td>
@@ -306,9 +306,9 @@
 																	<td class = 'noneright'><span style="font-size: 20px"><?php echo(isset($star_plate[6]) ?  $star_plate[6] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($star_plate_eng[6]) ?  $star_plate_eng[6] : '')?></span></td>
 																</tr>
 																<tr>
-																	<td class = 'bottomleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($structure[6]['chinese']) ?  $structure[6]['chinese'] : '')?></span></td>
+																	<td class = 'bottomleft' width="58px" height="50px"><?php echo(isset($structure[6]['chinese']) ? '<font class="chinese_char" color='.$structure[6]['color'].'>'.$structure[6]['chinese'].'<br/><span class="english">'.$structure[6]['pinyin'].'</span></font>' : '')?></td>
 																	<!-- <td class = 'nonebottom'>Negative</td> -->
-																	<td class = 'bottomright'><span style="font-size: 20px"><?php echo(isset($eight_door_plate[6]) ?  $eight_door_plate[6] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($eight_door_plate_eng[6]) ?  $eight_door_plate_eng[6] : '')?></span></td>
+																	<td class = 'bottomright'><?php echo (isset($eight_door_plate[6]) ? '<font class="chinese_char" color='.$eight_door_plate_color[6].'>'.$eight_door_plate[6].'<br/><span class="english">'.$eight_door_plate_english[6].'</span></font>' : '')?></td>
 																</tr>
 															</table>
 														</td>
@@ -319,9 +319,9 @@
 														<td class = "border">
 															<table class = 'none' <?php echo(isset($structure_yin_yang) ? ($structure_yin_yang == "Yin" ? 'bgcolor="#B8B8E6"' : '') : '')?>>
 																<tr>
-																	<td class = 'upperleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($heaven_plate[7]) ?  $heaven_plate[7] : '')?><br>&nbsp;&nbsp;&nbsp;<?php echo(isset($hidden_tian[7]) ?  $hidden_tian[7] : '')?></span></td>
+																	<td class = 'upperleft' width="58px" height="50px"><?php echo(isset($heaven_plate[7]) ? '<font class="chinese_char" color='.$heaven_plate_color[7].'>'.$heaven_plate[7].'<span class="english">'.$heaven_plate_english[7].'</span></font>' : '')?><br>&nbsp;&nbsp;&nbsp;<font class="chinese_char"><?php echo(isset($hidden_tian[7]) ?  '<font color='.$hidden_tian_color[7].'>'.$hidden_tian[7].'<span class="english">'.$hidden_tian_english[7].'</span></font>' : '')?></font></td>
 																	<td class = 'nonetop' width="58px" height="50px" rowspan='3'><?php echo(isset($good_special_structure[7]) ?  '<font size="2" color="red">'.$good_special_structure[7].'</font>' : '')?><?php echo(isset($bad_special_structure[7]) ?  '<font size="2" color="blue">'.$bad_special_structure[7].'</font>' : '')?></td>
-																	<td class = 'upperright' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($deity[7]) ?  $deity[7] : '')?><br/><span style="font-size: 10px"><?php echo(isset($deity_eng[7]) ?  $deity_eng[7] : '')?></span></span></td>
+																	<td class = 'upperright' width="58px" height="50px"><?php echo(isset($deity[7]) ? '<font class="chinese_char" color='.$deity_color[7].'>'.$deity[7].'<br/><span class="english">'.$deity_eng[7].'</span></font>' : '')?></td>
 																</tr>
 																<tr>
 																	<td class = 'noneleft' width="58px" height="50px"><font color="brown">Earth</font></td>
@@ -329,18 +329,18 @@
 																	<td class = 'noneright'><span style="font-size: 20px"><?php echo(isset($star_plate[7]) ?  $star_plate[7] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($star_plate_eng[7]) ?  $star_plate_eng[7] : '')?></span></td>
 																</tr>
 																<tr>
-																	<td class = 'bottomleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($structure[7]['chinese']) ?  $structure[7]['chinese'] : '')?></span></td>
+																	<td class = 'bottomleft' width="58px" height="50px"><?php echo(isset($structure[7]['chinese']) ? '<font class="chinese_char" color='.$structure[7]['color'].'>'.$structure[7]['chinese'].'<br/><span class="english">'.$structure[7]['pinyin'].'</span></font>' : '')?></td>
 																	<!-- <td class = 'nonebottom'>Negative</td> -->
-																	<td class = 'bottomright'><span style="font-size: 20px"><?php echo(isset($eight_door_plate[7]) ?  $eight_door_plate[7] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($eight_door_plate_eng[7]) ?  $eight_door_plate_eng[7] : '')?></span></td>
+																	<td class = 'bottomright'><?php echo (isset($eight_door_plate[7]) ? '<font class="chinese_char" color='.$eight_door_plate_color[7].'>'.$eight_door_plate[7].'<br/><span class="english">'.$eight_door_plate_english[7].'</span></font>' : '')?></span></td>
 																</tr>
 															</table>
 														</td>
 														<td class = "border">
 															<table class = 'none' <?php echo(isset($structure_yin_yang) ? ($structure_yin_yang == "Yin" ? 'bgcolor="#B8B8E6"' : '') : '')?>>
 																<tr>
-																	<td class = 'upperleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($heaven_plate[0]) ?  $heaven_plate[0] : '')?><br>&nbsp;&nbsp;&nbsp;<?php echo(isset($hidden_tian[0]) ?  $hidden_tian[0] : '')?></span></td>
+																	<td class = 'upperleft' width="58px" height="50px"><?php echo(isset($heaven_plate[0]) ? '<font class="chinese_char" color='.$heaven_plate_color[0].'>'.$heaven_plate[0].'<span class="english">'.$heaven_plate_english[0].'</span></font>' : '')?><br>&nbsp;&nbsp;&nbsp;<font class="chinese_char"><?php echo(isset($hidden_tian[0]) ?  '<font color='.$hidden_tian_color[0].'>'.$hidden_tian[0].'<span class="english">'.$hidden_tian_english[0].'</span></font>' : '')?></font></td>
 																	<td class = 'nonetop' width="58px" height="50px" rowspan='3'><?php echo(isset($good_special_structure[0]) ?  '<font size="2" color="red">'.$good_special_structure[0].'</font>' : '')?><?php echo(isset($bad_special_structure[0]) ?  '<font size="2" color="blue">'.$bad_special_structure[0].'</font>' : '')?></td>
-																	<td class = 'upperright' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($deity[0]) ?  $deity[0] : '')?><br/><span style="font-size: 10px"><?php echo(isset($deity_eng[0]) ?  $deity_eng[0] : '')?></span></span></td>
+																	<td class = 'upperright' width="58px" height="50px"><?php echo(isset($deity[0]) ? '<font class="chinese_char" color='.$deity_color[0].'>'.$deity[0].'<br/><span class="english">'.$deity_eng[0].'</span></font>' : '')?></td>
 																</tr>
 																<tr>
 																	<td class = 'noneleft' width="58px" height="50px"><font color="blue">Water</font></span></td>
@@ -348,9 +348,9 @@
 																	<td class = 'noneright'><span style="font-size: 20px"><?php echo(isset($star_plate[0]) ?  $star_plate[0] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($star_plate_eng[0]) ?  $star_plate_eng[0] : '')?></span></td>
 																</tr>
 																<tr>
-																	<td class = 'bottomleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($structure[0]['chinese']) ?  $structure[0]['chinese'] : '')?></span></td>
+																	<td class = 'bottomleft' width="58px" height="50px"><?php echo(isset($structure[0]['chinese']) ? '<font class="chinese_char" color='.$structure[0]['color'].'>'.$structure[0]['chinese'].'<br/><span class="english">'.$structure[0]['pinyin'].'</span></font>' : '')?></td>
 																	<!-- <td class = 'nonebottom'>Negative</td> -->
-																	<td class = 'bottomright'><span style="font-size: 20px"><?php echo(isset($eight_door_plate[0]) ?  $eight_door_plate[0] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($eight_door_plate_eng[0]) ?  $eight_door_plate_eng[0] : '')?></span></td>
+																	<td class = 'bottomright'><?php echo (isset($eight_door_plate[0]) ? '<font class="chinese_char" color='.$eight_door_plate_color[0].'>'.$eight_door_plate[0].'<br/><span class="english">'.$eight_door_plate_english[0].'</span></font>' : '')?></span></td>
 																</tr>
 															</table>
 														</td>
@@ -358,9 +358,9 @@
 														<td class = "border">
 															<table class = 'none' <?php echo(isset($structure_yin_yang) ? ($structure_yin_yang == "Yang" ? 'bgcolor="#B8B8E6"' : '') : '')?>>
 																<tr>
-																	<td class = 'upperleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($heaven_plate[5]) ?  $heaven_plate[5] : '')?><br>&nbsp;&nbsp;&nbsp;<?php echo(isset($hidden_tian[5]) ?  $hidden_tian[5] : '')?></span></td>
+																	<td class = 'upperleft' width="58px" height="50px"><?php echo(isset($heaven_plate[5]) ? '<font class="chinese_char" color='.$heaven_plate_color[5].'>'.$heaven_plate[5].'<span class="english">'.$heaven_plate_english[5].'</span></font>' : '')?><br>&nbsp;&nbsp;&nbsp;<font class="chinese_char"><?php echo(isset($hidden_tian[5]) ?  '<font color='.$hidden_tian_color[5].'>'.$hidden_tian[5].'<span class="english">'.$hidden_tian_english[5].'</span></font>' : '')?></font></td>
 																	<td class = 'nonetop' width="58px" height="50px" rowspan='3'><?php echo(isset($good_special_structure[5]) ?  '<font size="2" color="red">'.$good_special_structure[5].'</font>' : '')?><?php echo(isset($bad_special_structure[5]) ?  '<font size="2" color="blue">'.$bad_special_structure[5].'</font>' : '')?></td>
-																	<td class = 'upperright' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($deity[5]) ?  $deity[5] : '')?><br/><span style="font-size: 10px"><?php echo(isset($deity_eng[5]) ?  $deity_eng[5] : '')?></span></span></td>
+																	<td class = 'upperright' width="58px" height="50px"><?php echo(isset($deity[5]) ? '<font class="chinese_char" color='.$deity_color[5].'>'.$deity[5].'<br/><span class="english">'.$deity_eng[5].'</span></font>' : '')?></td>
 																</tr>
 																<tr>
 																	<td class = 'noneleft' width="58px" height="50px"><font color="orange">Metal</font></span></td>
@@ -368,9 +368,9 @@
 																	<td class = 'noneright'><span style="font-size: 20px"><?php echo(isset($star_plate[5]) ?  $star_plate[5] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($star_plate_eng[5]) ?  $star_plate_eng[5] : '')?></span></td>
 																</tr>
 																<tr>
-																	<td class = 'bottomleft' width="58px" height="50px"><span style="font-size: 20px"><?php echo(isset($structure[5]['chinese']) ?  $structure[5]['chinese'] : '')?></span></td>
+																	<td class = 'bottomleft' width="58px" height="50px"><?php echo(isset($structure[5]['chinese']) ? '<font class="chinese_char" color='.$structure[5]['color'].'>'.$structure[5]['chinese'].'<br/><span class="english">'.$structure[5]['pinyin'].'</span></font>' : '')?></td>
 																	<!-- <td class = 'nonebottom'>Negative</td> -->
-																	<td class = 'bottomright'><span style="font-size: 20px"><?php echo(isset($eight_door_plate[5]) ?  $eight_door_plate[5] : '')?></span><br/><span style="font-size: 10px"><?php echo(isset($eight_door_plate_eng[5]) ?  $eight_door_plate_eng[5] : '')?></span></td>
+																	<td class = 'bottomright'><?php echo (isset($eight_door_plate[5]) ? '<font class="chinese_char" color='.$eight_door_plate_color[5].'>'.$eight_door_plate[5].'<br/><span class="english">'.$eight_door_plate_english[5].'</span></font>' : '')?></td>
 																</tr>
 															</table>
 														</td>
@@ -395,8 +395,9 @@
 					 </div>
 					 <div class="shadow">&nbsp;</div>
 			  </div>    
-	  </div>    
-	
+	  </div>
+	  <div>
+	  </div>
 </body>
 <script src="jquery/jquery.js"></script>
 <script src="jquery/jquery-ui.js"></script>
